@@ -64,15 +64,15 @@ export class App2 {
         const wcOutputAsArray = wcOutput.split(/\s+/);
         const numLineas = parseInt(wcOutputAsArray[1], 10) + 1;
         if (lineas == `yes`) {
-          const echo = spawn('echo', [`\n${numLineas} lines`]);
+          const echo = spawn('echo', [`${numLineas} lines`]);
           echo.stdout.pipe(process.stdout);
         }
         if (palabras == `yes`) {
-          const echo = spawn('echo', [`\n${wcOutputAsArray[2]} words`]);
+          const echo = spawn('echo', [`${wcOutputAsArray[2]} words`]);
           echo.stdout.pipe(process.stdout);
         }
         if (caracteres == `yes`) {
-          const echo = spawn('echo', [`\n${wcOutputAsArray[3]} characters`]);
+          const echo = spawn('echo', [`${wcOutputAsArray[3]} characters`]);
           echo.stdout.pipe(process.stdout);
         }
       });
