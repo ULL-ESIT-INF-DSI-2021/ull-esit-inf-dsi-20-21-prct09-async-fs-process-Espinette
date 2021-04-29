@@ -3,9 +3,19 @@ import * as yargs from 'yargs';
 import * as chalk from 'chalk';
 import {spawn} from 'child_process';
 
+/**
+ * Clase App4 cuyo objetivo es una aplicación que permita hacer de wrapper de los distintos comandos empleados en Linux para el manejo de ficheros y directorios
+ */
 export class App4 {
+  /**
+   * COnstructor vacío de la clase
+   */
   constructor() {}
 
+  /**
+   * Funcion que dada una ruta concreta, mostrar si es un directorio o un fichero.
+   * @param fichero ruta a comprobar
+   */
   comandoShow(fichero: string) {
     fs.access(fichero, (err) => {
       if (err) {
@@ -22,6 +32,10 @@ export class App4 {
     });
   }
 
+  /**
+   * Funcion que crea un nuevo directorio a partir de una nueva ruta que recibe como parámetro.
+   * @param directorio Directorio a crear
+   */
   comandoMkdir(directorio: string) {
     fs.access(directorio, (err) => {
       if (!err) {
@@ -34,6 +48,10 @@ export class App4 {
     });
   }
 
+  /**
+   * Funcion que listar los ficheros dentro de un directorio
+   * @param directorio Directorio a listar
+   */
   comandoLs(directorio: string) {
     fs.access(directorio, (err) => {
       if (err) {
@@ -45,16 +63,20 @@ export class App4 {
     });
   }
 
-  comandoCat(directorio: string) {
-    fs.access(directorio, (err) => {
+  /**
+   * Funcion que muestra el contenido de un fichero
+   * @param fichero Fichero a mostrar
+   */
+  comandoCat(fichero: string) {
+    fs.access(fichero, (err) => {
       if (err) {
-        console.log(chalk.red.inverse(`La ruta introducida ${directorio} no existe o es incorrecta`));
+        console.log(chalk.red.inverse(`La ruta introducida ${fichero} no existe o es incorrecta`));
       } else {
-        fs.readFile(directorio, (err) => {
+        fs.readFile(fichero, (err) => {
           if (err) {
-            console.log(chalk.red.inverse(`La ruta introducida ${directorio} no es un fichero`));
+            console.log(chalk.red.inverse(`La ruta introducida ${fichero} no es un fichero`));
           } else {
-            const cat = spawn(`cat`, [directorio]);
+            const cat = spawn(`cat`, [fichero]);
             cat.stdout.pipe(process.stdout);
           }
         });
@@ -62,6 +84,10 @@ export class App4 {
     });
   }
 
+  /**
+   * Funcion para borrar ficheros y directorios.
+   * @param directorio Directorio o fichero a borrar
+   */
   comandoRm(directorio: string) {
     fs.access(directorio, (err) => {
       if (err) {
@@ -74,6 +100,11 @@ export class App4 {
     });
   }
 
+  /**
+   * Funcion para mover y copiar ficheros y/o directorios de una ruta a otra.
+   * @param origen Fichero o directorio a copiar
+   * @param destino Destino del fichero o directorio copiado
+   */
   comandoCp(origen: string, destino: string) {
     fs.access(origen, (err) => {
       if (err) {
