@@ -19,7 +19,38 @@ Para crear el proyecto primero debemos realizar un git clone, de la estructura d
  
  - ___Explicación___
 
- - ___Pruebas superadas___
+En este ejercicio se nos pedía realizar traza de ejecución , paso a paso, el contenido de la pila de llamadas, el registro de eventos de la API y la cola de manejadores de Node.js, además de lo que se muestra por la consola, además se nos pedía como mínimo, dos modificaciones del fichero helloworld.txt a lo largo de la ejecución del siguiente programa:
+
+```typescript
+import {access, constants, watch} from 'fs';
+
+if (process.argv.length !== 3) {
+  console.log('Please, specify a file');
+} else {
+  const filename = process.argv[2];
+
+  access(filename, constants.F_OK, (err) => {
+    if (err) {
+      console.log(`File ${filename} does not exist`);
+    } else {
+      console.log(`Starting to watch file ${filename}`);
+
+      const watcher = watch(process.argv[2]);
+
+      watcher.on('change', () => {
+        console.log(`File ${filename} has been modified somehow`);
+      });
+
+      console.log(`File ${filename} is no longer watched`);
+    }
+  });
+}
+```
+
+La traza explicada se encuentra en el link mostrado anteriormente. Por otro lado se nos pedía responder a un par de cuestiones:
+
+   - ¿Qué hace la función access?: prueba los permisos de un usuario para un archivo o directorio junto a la ruta del mismo que se le pasa a la función
+   - ¿Para qué sirve el objeto constants?: sirve para realizar las operaciones del sistema de archivos, ya que contiene las constantes de uso común en estas. 
 
 ### Ejercicio 2.
 
@@ -27,7 +58,19 @@ Para crear el proyecto primero debemos realizar un git clone, de la estructura d
 
  - ___Explicación___
 
- - ___Pruebas superadas___
+En este ejercicio habia que realizar dos funciones que proporcionen información sobre el número de líneas, palabras o caracteres que contiene un fichero de texto, teniendo que ser el fichero que recibe un parámetro pasado a la aplicacion desde la linea de comandos. Una función debe hacer uso del metodo pipe mientras que la otra no debe usar el método pipe.
+
+Función con Pipe:
+
+ ![Ejercicio1Funcion](imagenes/Ej2ConPipe.JPG)
+ 
+Función sin Pipe:
+
+ ![Ejercicio1Funcion](imagenes/Ej2SinPipe.JPG)
+ 
+ - ___Ejemplo de ejcución___
+
+![Ejercicio1Funcion](imagenes/ComandoEj2.JPG)
 
 ### Ejercicio 3.
 
