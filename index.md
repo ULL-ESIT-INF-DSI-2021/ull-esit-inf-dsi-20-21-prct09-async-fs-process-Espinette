@@ -15,41 +15,33 @@ Para crear el proyecto primero debemos realizar un git clone, de la estructura d
 
 ### Ejercicio 1.
 
- - ___Carpeta con el código resuelto___ = [Solución](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct06-generics-solid-Espinette/tree/master/src/ejercicio-1)
+ - ___Fichero con el código resuelto___ = [Solución](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct09-async-fs-process-Espinette/blob/master/src/ejercicio1.ts)
  
- - ___Fichero con las pruebas___ = [Pruebas](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct06-generics-solid-Espinette/blob/master/tests/ejercicio1.spec.ts)
-
- - ___Explicación de cada clase___
+ - ___Explicación___
 
  - ___Pruebas superadas___
 
 ### Ejercicio 2.
 
- - ___Carpeta con el código resuelto___ = [Solución](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct06-generics-solid-Espinette/tree/master/src/ejercicio-1)
- 
- - ___Fichero con las pruebas___ = [Pruebas](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct06-generics-solid-Espinette/blob/master/tests/ejercicio1.spec.ts)
+ - ___Fichero con el código resuelto___ = [Solución](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct09-async-fs-process-Espinette/blob/master/src/ejercicio2.ts)
 
- - ___Explicación de cada clase___
+ - ___Explicación___
 
  - ___Pruebas superadas___
 
 ### Ejercicio 3.
 
- - ___Carpeta con el código resuelto___ = [Solución](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct06-generics-solid-Espinette/tree/master/src/ejercicio-1)
- 
- - ___Fichero con las pruebas___ = [Pruebas](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct06-generics-solid-Espinette/blob/master/tests/ejercicio1.spec.ts)
+ - ___Carpeta con el código resuelto___ = [Solución](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct09-async-fs-process-Espinette/tree/master/src/ejercicio3)
 
- - ___Explicación de cada clase___
+ - ___Explicación___
 
  - ___Pruebas superadas___
 
 ### Ejercicio 4.
 
- - ___Carpeta con el código resuelto___ = [Solución](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct06-generics-solid-Espinette/tree/master/src/ejercicio-1)
- 
- - ___Fichero con las pruebas___ = [Pruebas](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct06-generics-solid-Espinette/blob/master/tests/ejercicio1.spec.ts)
+ - ___Fichero con el código resuelto___ = [Solución](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct09-async-fs-process-Espinette/blob/master/src/ejercicio4.ts)
 
- - ___Explicación de cada clase___
+ - ___Explicación___
 
  - ___Pruebas superadas___
  
