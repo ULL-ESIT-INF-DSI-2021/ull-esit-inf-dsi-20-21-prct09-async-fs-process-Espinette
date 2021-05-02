@@ -116,7 +116,7 @@ Para este ejercicio se nos pedía desarrollar una aplicación que permita hacer 
 
   - Mover y copiar ficheros y/o directorios de una ruta a otra. Para este caso, la aplicación recibirá una ruta origen y una ruta destino. En caso de que la ruta origen represente un directorio, se debe copiar dicho directorio y todo su contenido a la ruta destino.
 
-  ![Ejercicio1Funcion](imagenes/ComandoCp.JPG)
+  ![Ejercicio1Funcion](imagenes/ComandoCP.JPG)
 
  - ___Ejemplo de ejcución___
  
