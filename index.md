@@ -62,7 +62,7 @@ En este ejercicio habia que realizar dos funciones que proporcionen información
 
 Función con Pipe:
 
- ![Ejercicio1Funcion](imagenes/Ej2ConPipe.JPG)
+ ![Ejercicio1Funcion](imagenes/Ej2Conpipe.JPG)
  
 Función sin Pipe:
 
@@ -78,7 +78,13 @@ Función sin Pipe:
 
  - ___Explicación___
 
- - ___Pruebas superadas___
+En este ejercicio se nos pedía que a partir de nuestra [práctica 8](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct08-filesystem-notes-app-Espinette/tree/master/src/practica8) realizar una aplicación que reciba desde la línea de comandos el nombre de un usuario de la aplicación de notas, así como la ruta donde se almacenan las notas de dicho usuario, debiendo controlar os cambios realizados sobre todo el directorio especificado al mismo tiempo que dicho usuario interactúa con la aplicación de procesamiento de notas. Siendo nuestra aplicación desarrollada la siguiente:
+
+![Ejercicio1Funcion](imagenes/Ejercicio3.JPG)
+
+ - ___Ejemplo de ejcución___
+
+![Ejercicio1Funcion](imagenes/Ej3comando.JPG)
 
 ### Ejercicio 4.
 
@@ -86,5 +92,33 @@ Función sin Pipe:
 
  - ___Explicación___
 
- - ___Pruebas superadas___
+Para este ejercicio se nos pedía desarrollar una aplicación que permita hacer de wrapper de los distintos comandos empleados en Linux para el manejo de ficheros y directorios. a continuación mostraremos lo que se nos pedía realizar y su correspondiente solución realizada:
+
+  - Dada una ruta concreta, mostrar si es un directorio o un fichero.
+  
+  ![Ejercicio1Funcion](imagenes/ComandoShow.JPG)
+  
+  - Crear un nuevo directorio a partir de una nueva ruta que recibe como parámetro.
+  
+  ![Ejercicio1Funcion](imagenes/ComandoMkdir.JPG)
+
+  - Listar los ficheros dentro de un directorio.
+
+  ![Ejercicio1Funcion](imagenes/ComandoLs.JPG)
+
+  - Mostrar el contenido de un fichero (similar a ejecutar el comando cat).
+
+  ![Ejercicio1Funcion](imagenes/ComandoCat.JPG)
+
+  - Borrar ficheros y directorios.
+
+  ![Ejercicio1Funcion](imagenes/ComandoRm.JPG)
+
+  - Mover y copiar ficheros y/o directorios de una ruta a otra. Para este caso, la aplicación recibirá una ruta origen y una ruta destino. En caso de que la ruta origen represente un directorio, se debe copiar dicho directorio y todo su contenido a la ruta destino.
+
+  ![Ejercicio1Funcion](imagenes/ComandoCp.JPG)
+
+ - ___Ejemplo de ejcución___
  
+   ![Ejercicio1Funcion](imagenes/ComandosEj4.JPG)
+
