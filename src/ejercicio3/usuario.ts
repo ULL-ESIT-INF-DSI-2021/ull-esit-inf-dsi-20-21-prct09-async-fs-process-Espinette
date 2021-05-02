@@ -17,15 +17,15 @@ export class Usuario {
    */
   addNote(usuario: string, titulo: string, cuerpo: string, color: string) {
     const nota: Nota = new Nota(titulo, cuerpo, color);
-    if (fs.existsSync(`src/practica8/usuarios/${usuario}`) == false) {
-      fs.mkdir(`src/practica8/usuarios/${usuario}`, (err) => {
+    if (fs.existsSync(`src/ejercicio3/usuarios/${usuario}`) == false) {
+      fs.mkdir(`src/ejercicio3/usuarios/${usuario}`, (err) => {
         if (err) {
           console.log(chalk.red('Hubo un error mientras se creaba la carpeta'));
         }
       });
     }
-    if (fs.existsSync(`src/practica8/usuarios/${usuario}/${titulo}.json`) == false) {
-      fs.writeFile(`src/practica8/usuarios/${usuario}/${titulo}.json`, nota.toJSON(), (err) => {
+    if (fs.existsSync(`src/ejercicio3/usuarios/${usuario}/${titulo}.json`) == false) {
+      fs.writeFile(`src/ejercicio3/usuarios/${usuario}/${titulo}.json`, nota.toJSON(), (err) => {
         if (err) {
           console.log(chalk.red('Hubo un error mientras se escribía el fichero'));
         } else {
@@ -43,8 +43,8 @@ export class Usuario {
    * @param titulo Titulo de la nota
    */
   removeNote(usuario: string, titulo: string) {
-    if (fs.existsSync(`src/practica8/usuarios/${usuario}/${titulo}.json`) == true) {
-      fs.rm(`src/practica8/usuarios/${usuario}/${titulo}.json`, (err) => {
+    if (fs.existsSync(`src/ejercicio3/usuarios/${usuario}/${titulo}.json`) == true) {
+      fs.rm(`src/ejercicio3/usuarios/${usuario}/${titulo}.json`, (err) => {
         if (err) {
           console.log(chalk.red('Hubo un error mientras se borraba el fichero'));
         } else {
@@ -61,10 +61,10 @@ export class Usuario {
    * @param usuario Usuario que queremos analizar
    */
   listNote(usuario: string) {
-    if (fs.existsSync(`src/practica8/usuarios/${usuario}`) == true) {
+    if (fs.existsSync(`src/ejercicio3/usuarios/${usuario}`) == true) {
       console.log('Your notes:\n');
-      fs.readdirSync(`src/practica8/usuarios/${usuario}`).forEach((item) => {
-        const note = fs.readFileSync(`src/practica8/usuarios/${usuario}/${item}`);
+      fs.readdirSync(`src/ejercicio3/usuarios/${usuario}`).forEach((item) => {
+        const note = fs.readFileSync(`src/ejercicio3/usuarios/${usuario}/${item}`);
         const noteJSON = JSON.parse(note.toString());
         this.obtenerColor(`- ${noteJSON.titulo}`, noteJSON.color);
       });
@@ -79,8 +79,8 @@ export class Usuario {
    * @param titulo Titulo de la nota
    */
   readNote(usuario: string, titulo: string) {
-    if (fs.existsSync(`src/practica8/usuarios/${usuario}/${titulo}.json`) == true) {
-      const note = fs.readFileSync(`src/practica8/usuarios/${usuario}/${titulo}.json`);
+    if (fs.existsSync(`src/ejercicio3/usuarios/${usuario}/${titulo}.json`) == true) {
+      const note = fs.readFileSync(`src/ejercicio3/usuarios/${usuario}/${titulo}.json`);
       const noteJSON = JSON.parse(note.toString());
       this.obtenerColor(`Titulo: ${noteJSON.titulo}\nCuerpo: ${noteJSON.cuerpo}`, noteJSON.color);
     } else {
@@ -97,8 +97,8 @@ export class Usuario {
    * @param newColor Nuevo color de la nota
    */
   modifyNote(usuario: string, titulo: string, newTitulo: string, newCuerpo: string, newColor: string) {
-    if (fs.existsSync(`src/practica8/usuarios/${usuario}/${titulo}.json`) == true) {
-      const note = fs.readFileSync(`src/practica8/usuarios/${usuario}/${titulo}.json`);
+    if (fs.existsSync(`src/ejercicio3/usuarios/${usuario}/${titulo}.json`) == true) {
+      const note = fs.readFileSync(`src/ejercicio3/usuarios/${usuario}/${titulo}.json`);
       const noteJSON = JSON.parse(note.toString());
       const newNota: Nota = new Nota(noteJSON.titulo, noteJSON.cuerpo, noteJSON.color);
       if (newTitulo !== '' ) {
@@ -110,8 +110,8 @@ export class Usuario {
       if (newColor !== '' ) {
         newNota.setColor(newColor);
       }
-      fs.renameSync(`src/practica8/usuarios/${usuario}/${titulo}.json`, `src/practica8/usuarios/${usuario}/${newNota.getTitulo()}.json`);
-      fs.writeFile(`src/practica8/usuarios/${usuario}/${newNota.getTitulo()}.json`, newNota.toJSON(), (err) => {
+      fs.renameSync(`src/ejercicio3/usuarios/${usuario}/${titulo}.json`, `src/ejercicio3/usuarios/${usuario}/${newNota.getTitulo()}.json`);
+      fs.writeFile(`src/ejercicio3/usuarios/${usuario}/${newNota.getTitulo()}.json`, newNota.toJSON(), (err) => {
         if (err) {
           console.log(chalk.red('Hubo un error mientras se escribía el fichero'));
         } else {
